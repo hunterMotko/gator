@@ -17,15 +17,17 @@ type State struct {
 }
 
 func ExecuteCli() {
-	if os.Args[1] == "init" {
+	if len(os.Args) > 1 && os.Args[1] == "init" {
 		if err := handlerInit(); err != nil {
 			log.Fatalf("INIT ERR: %v\n", err)
 		}
 		log.Println("success config: $HOME/.gatorconfig.json")
 		os.Exit(0)
 	}
+
 	conf, err := config.Read()
 	if err != nil {
+		log.Println("Did you gator init?")
 		log.Fatalf("cannot read config error: %v\n", err)
 	}
 

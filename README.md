@@ -26,4 +26,16 @@ Run `gator init` to initalize you .gatorconfig.json file
 
 ## Usage
 
-- 
+Commands: `gator [commmand] [params ...]`
+
+* reset
+* register: Register a user
+* login: Login as a user
+* users: List users
+* addfeed: Add a RSS feed
+* feeds: List all feeds for that user
+* browse: Browse users posts 
+* agg: Srape current feeds
+* follow: Follow a feed
+* following: List all feeds the user is following
+* unfollow: Unfollow a feed
